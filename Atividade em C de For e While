@@ -1,0 +1,237 @@
+Uma atividade dividas em 8 exercícios, respectivamente de Estrutura For e While.
+
+Atividade 1)
+
+#include <stdio.h>
+
+int main(void){
+
+float nota[4] = {0.0, 0.0, 0.0, 0.0}, media = 0.0;
+int x;
+
+for(x = 0; x < 4; x++){
+  do{
+    printf("Digite a nota %d: ", x+1);
+    scanf("%f", &nota[x]);
+    if(nota[x] < 0 || nota[x] > 10){
+      printf("Nota inválida!\n");
+    }
+  }
+  while (nota[x] < 0 || nota[x] > 10);
+}
+
+for (x = 0; x < 4; x++){
+  media += nota[x];
+}
+
+media /= 4;
+
+printf("A média é: %.2f", media);
+  
+return 0;
+}
+
+Atividade 2)
+
+#include <stdio.h>
+
+int main(void){
+
+int x;
+float nadadores[10];
+int infantil = 0, juvenil = 0, senior = 0;
+
+  for(x = 0; x < 10; x++){
+    printf("Digite sua idade: ");
+    scanf("%f", &nadadores[x]);
+    if(nadadores[x] <= 10){
+      infantil ++;
+    } else if(nadadores[x] <= 17){
+      juvenil ++;
+    }else if(nadadores[x] > 17){
+      senior ++;
+    }
+  }
+
+  printf("\nExistem %d nadadores infantis", infantil);
+  printf("\nExistem %d nadadores juniores", juvenil);
+  printf("\nExistem %d nadadores seniores", senior);
+
+return 0;
+}
+
+Atividade 3)
+
+#include <stdio.h>
+
+int main(void){
+
+int a = 0;
+
+  while(a != 10){
+    printf("Digite um número: ");
+    scanf("%d", &a);
+
+    if(a == 10){
+      printf("Você acertou!");
+    }
+  }
+  
+return 0;
+}
+
+Atividade 4)
+
+#include <stdio.h>
+
+int main(void) {
+    int i, x = 1;
+    char aluno[250];
+    float nota[4], soma = 0, media;
+
+    while (x <= 5) {
+         
+        printf("\nDigite o nome do aluno %d°: ", x);
+        scanf("%s", aluno);
+
+        for (i = 0; i < 4; i++) {
+            printf("\nDigite a nota %d°: ", i + 1);
+            scanf("%f", &nota[i]);
+            soma += nota[i];
+        }
+
+        media = soma / 4;
+
+        printf("\nNome do Aluno: %s", aluno);
+        printf("\nMédia: %.2f", media);
+
+        if (media >= 7.0) {
+            printf("\nSituação: Aprovado");
+        } else {
+            printf("\nSituação: Reprovado");
+        }
+
+        x++;
+    }
+
+    printf("\nNúmero máximo de registros atingidos!\n");
+
+    return 0;
+}
+
+Atividade 5)
+
+#include <stdio.h>
+
+int main() {
+
+int X = 1;
+int a = 0, b = 0, c = 0;
+int equilatero = 0, isosceles = 0, escaleno = 0;
+  while(X < 4){
+    printf("\nDigite o primeiro lado do  %d° triangulo: ", X);
+    scanf("%d", &a);
+    printf("\nDigite o segundo lado do %d° triangulo: ",X);
+    scanf("%d", &b);
+    printf("\nDigite a base do %d° triangulo: ",X);
+    scanf("%d", &c);
+    X ++;
+    if(a == b && b == c){
+     equilatero++;
+      }
+      else if(a == b || b == c){
+     isosceles++;
+      }
+      else{
+     escaleno++;
+      }
+  }
+  printf("\nQuantidade de triangulos equilateros: %d", equilatero);
+  printf("\nQuantidade de triangulos isosceles: %d", isosceles);
+  printf("\nQuantidade de triangulos escalenos: %d", escaleno);
+  
+
+    return 0;
+}
+
+
+Atividade 6)
+
+
+#include <stdio.h> 
+
+float valor;
+int main(){
+    do {
+        printf("Digite um valor float (entre 10.0 e 12.0): ");
+        scanf("%f", &valor);
+        if (valor < 10.0 || valor > 12.0) {
+            printf("Valor fora do intervalo. Tente novamente.\n");
+       }
+    } 
+      while (valor < 10.0 || valor > 12.0);
+    printf("Valor aceito: %.2f\n", valor);
+    return 0;
+}
+
+
+
+Atividade 7)
+
+#include <stdio.h>
+
+int main(void){
+
+int numero;
+
+while (1){
+  printf("Digite um número inteiro até 10: ");
+    scanf("%d", &numero);
+
+    if (numero < 1 || numero > 10) {
+    printf("Número inválido\n");
+    break;
+    }
+    
+  printf("Tabuada do %d:\n", numero);
+    for (int i = 1; i <= 10; i++) {
+    printf("%d x %d = %d\n", numero, i, numero * i);
+    }
+    printf("\n");
+  }
+
+  return 0;
+}
+
+Atividade 8)
+
+#include <stdio.h> 
+#include <string.h> 
+
+int numero;
+
+int main(void) {
+    char resposta[4];
+
+    while (1) {
+        printf("Digite um número inteiro entre 1 e 10: ");
+        scanf("%d", &numero);
+
+        if (numero < 1 || numero > 10) {
+            printf("Número fora do intervalo. Programa encerrado.\n");
+            break;
+        }
+        printf("Tabuada do %d:\n", numero);
+        for (int i = 1; i <= 10; i++) {
+            printf("%d x %d = %d\n", numero, i, numero * i);
+        }
+        printf("\n");       
+        printf("Deseja calcular outra tabuada? (sim/não): ");
+        scanf("%s", resposta);       
+        if (strcmp(resposta, "não") == 0) {
+            printf("Programa encerrado.\n");
+            break;
+        }
+    }
+    return 0;
+}
