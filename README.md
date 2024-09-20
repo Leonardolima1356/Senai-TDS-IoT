@@ -3,4 +3,5 @@ Projetos de IoT que fiz durante as aulas no Senai, consistindo de:
 - Semáforo;
 - Fotoresistor;
 - Sensor PIR;
-- Micro Servo.
+- Micro Servo;
+- Códigos em C, Estruturas Sequenciais, Condicionais, For e While.
