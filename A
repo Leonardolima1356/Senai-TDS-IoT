@@ -1,0 +1,379 @@
+2 atividades dividas em 14 exercícios, respectivamente de Estrutura Sequencial e Condicional.
+
+Estrutura Sequencial
+Atividade 1)
+
+#include <stdio.h>
+
+int main(void) {
+
+int a;
+int b;
+
+printf("Digite um número: ");
+scanf("%d", &a);
+printf("\nDigite outro número: ");
+scanf("%d", &b);
+
+  printf("O resultado da soma é: %d", a+b);
+  return 0;
+}
+
+Atividade 2)
+
+#include <stdio.h>
+
+int main(void) {
+
+float raio, pi = 3.14159, area;
+
+printf("Digite um raio de um circulo: ");
+scanf("%f", &raio);
+area = pi * (raio * raio);
+
+printf("A area do circulo e: %.2f", area);
+
+return 0;
+}
+
+Atividade 3)
+
+#include <stdio.h>
+
+int main(void) {
+
+int a, b, c, d;
+int ab, cd, diferenca;
+
+printf("Digite um número inteiro: ");
+scanf("%d", &a);
+printf("Digite outro número inteiro: ");
+scanf("%d", &b);
+printf("Digite outro número inteiro: ");
+scanf("%d", &c);
+printf("Digite o último número inteiro: ");
+scanf("%d", &d);
+
+ab = a * b;
+cd = c * d;
+diferenca = ab - cd;
+
+printf("A diferença entre o produto de A e B pelo produto de C e D é: %d", diferenca);
+
+return 0;
+}
+
+Atividade 4)
+
+#include <stdio.h>
+
+int main(void) {
+
+int ID, horas; 
+float salario, salario_horas;
+
+printf("Digite o número do funcionário: ");
+scanf("%d", &ID);
+
+printf("Digite a quantidade de horas trabalhadas: ");
+scanf("%d", &horas);
+
+printf("Digite o valor recebido por hora: ");
+scanf("%f", &salario_horas);
+
+salario = horas * salario_horas;
+
+printf("O funcionário %d recebeu R$ %.2f", ID, salario);
+
+return 0;
+}
+
+Atividade 5)
+
+#include <stdio.h>
+
+int main(void) {
+
+int codigo1, codigo2, quantidade1, quantidade2;
+float valor1, valor2, valor_total;
+
+printf("Digite o código do produto: ");
+scanf("%d", &codigo1);
+
+printf("Digite a quantidade: ");
+scanf("%d",&quantidade1);
+
+printf("Digite o valor: ");
+scanf("%f", &valor1);
+
+printf("Digite outro código do produto: ");
+scanf("%d", &codigo2);
+
+printf("Digite a quantidade: ");
+scanf("%d",&quantidade2);
+
+printf("Digite o valor: ");
+scanf("%f", &valor2);
+
+valor_total = (quantidade1 * valor1) + (quantidade2 * valor2);
+
+printf("O valor total é: %.2f", valor_total);
+
+return 0;
+}
+
+Atividade 6)
+
+#include <stdio.h>
+
+int main(void) {
+
+float a, b, c, pi = 3.14159, triangulo, circulo, trapezio, quadrado, retangulo;
+
+printf("Digite o primeiro número: ");
+scanf("%f", &a);
+
+printf("Digite outro número: ");
+scanf("%f",&b);
+
+printf("Digite o último número: ");
+scanf("%f", &c);
+
+triangulo = a * c / 2;
+circulo = pi * c * c;
+trapezio = (a + b) * c / 2;
+quadrado = b * b;
+retangulo = a * b;
+
+printf("Triangulo: %.3f\n", triangulo);
+printf("circulo: %.3f\n", circulo);
+printf("trapezio: %.3f\n", trapezio);
+printf("quadrado: %.3f\n", quadrado);
+printf("retangulo: %.3f\n", retangulo);
+
+return 0;
+}
+
+Estrutura Condicional
+
+Atividade 1)
+
+#include <stdio.h>
+
+int main(void) {
+
+int numero;
+
+printf("Digite o número: ");
+scanf("%d", &numero);
+
+if(numero >= 0){
+  printf("O número é positivo");
+}
+else{
+  printf("O número é negativo");
+}
+
+return 0;
+}
+
+Atividade 2)
+
+#include <stdio.h>
+
+int main(void) {
+
+int numero;
+
+printf("Digite o número: ");
+scanf("%d", &numero);
+
+if(numero % 2 == 0){
+  printf("O número é par");
+}
+else{
+  printf("O número é impar");
+}
+
+return 0;
+}
+
+Atividade 3)
+
+#include <stdio.h>
+
+int main(void) {
+
+int numero, numero2;
+
+printf("Digite o número: ");
+scanf("%d", &numero);
+
+printf("Digite outro número: ");
+scanf("%d", &numero2);
+
+if(numero >= numero2){
+if(numero % numero2 == 0){
+  printf("Multiplo");
+}
+else{
+  printf("Não é Multiplo");
+}
+}
+else{
+  if(numero2 % numero == 0){
+    printf("Multiplo");
+  }
+  else{
+    printf("Não é Multiplo");
+  }
+}
+return 0;
+}
+
+Atividade 4)
+
+#include <stdio.h>
+
+int main(void) {
+
+int horario_inicial, horario_final, duracao;
+
+printf("Digite o horário inicial: ");
+scanf("%d", &horario_inicial);
+printf("Digite o horário final: ");
+scanf("%d", &horario_final);
+
+if (horario_inicial == horario_final){
+  printf("O jogo durou 24 horas");
+}
+  else if(horario_inicial < horario_final){
+    duracao = horario_final - horario_inicial;
+    printf("O jogo durou %d horas.", duracao);
+  }
+  else{
+    duracao = 24 - horario_inicial + horario_final;
+    printf("O jogo durou %d horas.", duracao);
+  }
+return 0;
+}
+
+Atividade 5)
+
+#include <stdio.h>
+
+int main(void) {
+
+int codigo, quantidade;
+float preco;
+
+printf("Digite o código do Produto: ");
+scanf("%d", &codigo);
+printf("Digite a quantidade: ");
+scanf("%d", &quantidade);
+
+if(codigo == 1){
+  preco = 4.00;
+   preco = preco * quantidade;
+ }else if(codigo == 2){
+  preco = 4.50;
+   preco = preco * quantidade;
+ }else if(codigo == 3){
+  preco = 5.00;
+   preco = preco * quantidade;
+  }else if(codigo == 4){
+  preco = 2.00;
+   preco = preco * quantidade;
+  }else if(codigo == 5){
+  preco = 1.50;
+  preco = preco * quantidade;
+}
+
+  printf("O valor total de compra é: %.2f", preco);
+
+return 0;
+}
+
+Atividade 6)
+
+#include <stdio.h>
+
+int main(void) {
+
+float a = 0.0;
+
+  printf("Digite um número: ");
+  scanf("%f", &a);
+
+  if(a >= 0 && a <= 25){
+    printf("O número está entre o intervalo de 0 e 25");
+  }else if(a >= 25 && a <= 50){
+    printf("O número está entre o intervalo de 25 e 50");
+  }else if (a >= 50 && a <= 75){
+    printf("O número está entre o intervalo de 50 e 75");
+  }else if (a >= 75 && a <= 100){
+    printf("O número está entre o intervalo de 75 e 100");
+  }else{
+    printf("O número não está entre nenhum dos intervalos");
+  }
+
+return 0;
+}
+
+Atividade 7)
+
+#include <stdio.h>
+
+int main(void) {
+
+float x, y;
+
+printf("Diga o eixo X: ");
+scanf("%f", &x);
+printf("Diga o eixo Y: ");
+scanf("%f", &y);
+
+if (x == 0 && y == 0){
+  printf("Origem");
+}else if(x == 0){
+  printf("Eixo Y");
+}else if (y == 0){
+  printf("Eixo X");
+}else if (x > 0 && y > 0){
+  printf("Q1");
+  }else if(x < 0 && y > 0){
+    printf("Q2");
+  }else if (x < 0 && y < 0){
+    printf("Q3");
+  }else if (x > 0 && y < 0){
+  printf("Q4");
+}
+
+return 0;
+}
+
+Atividade 8)
+
+#include <stdio.h>
+
+int main(void){
+
+double salario, imposto = 0.0;
+
+printf("Digite o salário: ");
+scanf("%lf", &salario);
+
+if(salario <= 2000.00){
+  imposto = 0.0;
+}else if (salario <= 3000.00){
+  imposto = (salario - 2000.00) * 0.08;
+}else if(salario <= 4000.00){
+  imposto = (salario - 3000.00) * 0.18 + 1000.00 * 0.08;
+}else{
+  imposto = (salario - 4500.00) * 0.28 + 1000.00 * 0.18 + 1000.00 * 0.08;
+}
+
+printf("O imposto a ser pago é: R$ %.2lf", imposto);
+
+return 0;
+}
